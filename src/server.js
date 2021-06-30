@@ -6,8 +6,8 @@ const cors = require('cors');
 const path = require('path');
 const morgan = require('morgan');
 
-const connectToDatabase = require("./src/database");
-const routes = require("./src/routes");
+const connectToDatabase = require("./database");
+const routes = require("./routes");
 const { appendFile } = require("fs");
 
 connectToDatabase();
