@@ -1,10 +1,11 @@
 const express = require('express');
+const UsuerControllers = require('./controllers/UsuerControllers');
 
 const routes = express.Router();
 
-const Usuario = require('./controllers/usuariosControllers');
+routes.post('/api/user', UsuerControllers.createUser)
+routes.get('/api/user', UsuerControllers.getUsers)
+routes.get('/api/user/:user_id', UsuerControllers.getUserByid)
 
-//routes.get('/', Usuario.index);
-routes.post('/api/usuarios', Usuario.store);
 
 module.exports = routes;
